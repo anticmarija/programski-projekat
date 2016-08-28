@@ -10,8 +10,18 @@ use App\Http\Requests;
 class ProjectController extends Controller
 {
     public function create () {
-       
-        return view('project');
+
+        $teme =  array();
+        $teme = Project::all();
+
+        $teme_naslovi = array();
+
+        foreach ($teme as $tema) {
+            $teme_naslovi[] = $tema->title;
+        }
+        
+      
+        return view('pages.project',['teme' => $teme, 'teme_naslovi' => $teme_naslovi]);
 
     }
 
@@ -25,10 +35,13 @@ class ProjectController extends Controller
        $project = new Project;
 
        $project->title=$request->title;
+       $project->grade=0;
 
        $project->save();
+       
+       $brStud = 5;
 
-       return view('students', ['project' => $project]);
+       return view('pages.students', ['project' => $project, 'brStud' => $brStud]);
 
 
    }

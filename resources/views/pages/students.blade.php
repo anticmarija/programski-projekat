@@ -1,17 +1,15 @@
-@extends('layout')
-
-@section('title')
-
-    Prijavi tim:
-@stop
+@extends('layouts.layout')
 
 @section('content')
+
+
+    <h3>Prijavi tim:</h3>
 
     <form method="post" action="/students/store">
 
             <div class="form-group">
 
-                @for($i=1; $i <6;$i++)
+                @for($i=0; $i < 5; $i++)
 
                     <input type="text" name="name{{$i}}"
                            placeholder="Ime i prezime" class="form-control" id="focusedInput">
