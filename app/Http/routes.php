@@ -11,8 +11,18 @@
 |
 */
 
-Route::get('/', 'ProjectController@create');
+
+Route::get('/', function () {
+    return view('pages.welcome');
+});
+
+Route::get('/create', 'ProjectController@create');
 
 Route::post('/students/', 'ProjectController@storeProject');
 
 Route::post('/students/store', 'StudentsController@store');
+
+
+Route::get('/upload', 'FilesController@upload');
+
+Route::post('/upload/handle', 'FilesController@handleUpload');
