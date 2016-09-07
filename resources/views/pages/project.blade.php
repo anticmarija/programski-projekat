@@ -10,7 +10,7 @@
 
     <h3 style="margin-top: 50px">Unesi temu projekta:</h3>
 
-    <form method="post" action="/students/">
+    <form method="post" action="/students">
         <div class="form-group">
 
         <input type="text" name="title" class="form-control" id="focusedInput">

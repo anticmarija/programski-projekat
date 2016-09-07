@@ -11,7 +11,6 @@ class ProjectController extends Controller
 {
     public function create () {
 
-        $teme =  array();
         $teme = Project::all();
 
         $teme_naslovi = array();
@@ -30,7 +29,6 @@ class ProjectController extends Controller
        $this->validate($request,
            ['title' => 'required'
          ]);
-
 
        $project = new Project;
 

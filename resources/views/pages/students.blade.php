@@ -1,11 +1,11 @@
-@extends('layouts.layout')
+@extends('layouts.content')
 
 @section('content')
 
 
     <h3>Prijavi tim:</h3>
 
-    <form method="post" action="/students/store">
+    <form method="POST" action="{{ action('StudentsController@store') }}">
 
             <div class="form-group">
 

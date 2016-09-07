@@ -15,13 +15,11 @@
 Route::get('/', function () {
     return view('pages.welcome');
 });
-
 Route::get('/create', 'ProjectController@create');
 
-Route::post('/students/', 'ProjectController@storeProject');
+Route::post('/student/store', 'StudentsController@store');
 
-Route::post('/students/store', 'StudentsController@store');
-
+Route::post('/students', 'ProjectController@storeProject');
 
 Route::get('/upload', 'FilesController@upload');
 

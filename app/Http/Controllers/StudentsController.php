@@ -14,12 +14,12 @@ class StudentsController extends Controller
 
     public function store(Request $request) {
 
-        $this->validate($request,
-            ['name' => 'required',
-                'index'=> 'required'
-            ]);
+//       $this->validate($request,
+//            [   'name' => 'required',
+//                'index'=> 'required'
+//            ]);
 
-        for ($i=1; $i<6; $i++) {
+        for ($i=0; $i<5; $i++) {
 
             $student = new Student;
 
@@ -31,7 +31,7 @@ class StudentsController extends Controller
 
         }
 
-        return view('pages.end', ['project_id' => $request->input('project_id')]);
+        return view('pages.end',['project_id' => $request->input('project_id')]);
 
     }
 }

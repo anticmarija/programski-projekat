@@ -1,6 +1,4 @@
-@extends('layouts.layout')
-
-
+@extends('layouts.content')
 @section('content')
 
     <div class="container"></div>
@@ -9,7 +7,7 @@
             <ul class="nav nav-pills nav-stacked">
 
                 <li class="text-center" style="background-color: lightgrey">
-                    <a href="/create/">Prijavi projekat</a>
+                    <a href="{{action('ProjectController@create')}}">Prijavi projekat</a>
                 </li>
                 <br>
 
@@ -31,4 +29,9 @@
 
     </div>
 
+@stop
+
+@section('footer')
+    @parent
+    novi footer
 @stop
