@@ -14,12 +14,15 @@ class StudentsController extends Controller
 
     public function store(Request $request) {
 
-//       $this->validate($request,
-//            [   'name' => 'required',
-//                'index'=> 'required'
-//            ]);
+        for($i=1; $i<6; $i++) {
+            
+            $this->validate($request,
+                ['name'.$i => 'required',
+                    'index'.$i => 'required'
+                ]);
+        }
 
-        for ($i=0; $i<5; $i++) {
+        for ($i=1; $i<6; $i++) {
 
             $student = new Student;
 
@@ -32,6 +35,26 @@ class StudentsController extends Controller
         }
 
         return view('pages.end',['project_id' => $request->input('project_id')]);
+
+    }
+
+    public function singleStudent() {
+        
+        return view('pages.singleStudent');
+    }
+    
+    public function storeSingleStudent(Request $request) {
+
+        $student = new Student;
+
+        $student->name = $request->input('name');
+        $student->index = $request->input('index');
+        $student->project_id = 0;
+
+        $student->save();
+
+        return redirect()->to('/singleStudent');
+
 
     }
 }

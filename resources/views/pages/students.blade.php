@@ -9,7 +9,7 @@
 
             <div class="form-group">
 
-                @for($i=0; $i < 5; $i++)
+                @for($i=1; $i < 6; $i++)
 
                     <input type="text" name="name{{$i}}"
                            placeholder="Ime i prezime" class="form-control" id="focusedInput">

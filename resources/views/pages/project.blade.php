@@ -1,9 +1,4 @@
-@extends('layouts.layout')
-
-@section('title')
-
-    Unesi temu projekta:
-@stop
+@extends('layouts.content')
 
 @section('content')
 
@@ -53,40 +48,42 @@
 
     <p id="demo"></p>
 
+@stop
+
+@section('footer')
+    @parent
+
     <script>
 
-      function pretraga(teme) {
+        function pretraga(teme) {
 
-          if (teme.length==0) {
+            if (teme.length==0) {
 
-                 document.getElementById("demo").innerHTML = "Nema prijavljenih tema!";
-          }
-          else {
-              var lista = document.getElementById("list");
-              var input = document.getElementById("input");
+                document.getElementById("demo").innerHTML = "Nema prijavljenih tema!";
+            }
+            else {
+                var lista = document.getElementById("list");
+                var input = document.getElementById("input");
 
-              var s = input.value;
+                var s = input.value;
 
-              lista.parentNode.removeChild(lista);
+                lista.parentNode.removeChild(lista);
 
 
-              text = "<ol class='list-group'>";
+                text = "<ol class='list-group'>";
 
-              for (i = 0; i < teme.length; i++) {
+                for (i = 0; i < teme.length; i++) {
 
-                  if (teme[i].indexOf(s) != -1) {
-                      text += "<li class='list-group-item'>" + teme[i] + "</li>";
-                  }
+                    if (teme[i].indexOf(s) != -1) {
+                        text += "<li class='list-group-item'>" + teme[i] + "</li>";
+                    }
 
-              }
-              text += "</ol>";
+                }
+                text += "</ol>";
 
-              document.getElementById("demo").innerHTML = text;
+                document.getElementById("demo").innerHTML = text;
 
-          }
-      }
+            }
+        }
     </script>
-
-
-
 @stop

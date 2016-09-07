@@ -10,30 +10,25 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="/public/css/style.css">
+
 @stop
 
 @section('header')
-    <div class="row">
-        <div class="col-md-3 col-lg-offset-1">
-            <h1>MPP - Projekat</h1>
-        </div>
 
-        <div class="col-md-3 col-lg-offset-1">
+    <div class="row col-md-6 col-md-offset-4">
 
-            <button type="button" class="btn btn-primary" style="margin-top: 25px">
-                Uloguj se kao admin
-            </button>
+        <h1>MPP - Projekat</h1>
 
-        </div>
     </div>
 @stop
 
 
 @section('content')
-    this is my content Dekis
 @stop
 
 @section('footer')
-    this is my footer deki
+
+    <div class="container">
+        <a href="/"><span class="label label-default">Početni meni</span></a>
+
 @stop

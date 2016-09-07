@@ -1,8 +1,8 @@
-@extends('layouts.layout')
+@extends('layouts.content')
 
 @section('content')
 
-    <h2>Pošalji projekat:</h2>
+    <h4>Pošalji projekat:</h4>
 
     <br>
     {!! Form::open(array('url' => '/upload/handle', 'files' => true)) !!}

@@ -1,7 +1,11 @@
 @extends('layouts.content')
-@section('content')
 
-    <div class="container"></div>
+@section('head')
+
+    @parent
+
+@stop
+@section('content')
 
         <div style="margin-top: 100px">
             <ul class="nav nav-pills nav-stacked">
@@ -17,7 +21,12 @@
                 <br>
 
                 <li class="text-center" style="background-color: lightgrey" >
-                    <a href="#">Pogledaj broj poena</a>
+                    <a href="/singleStudent">Prijavi studenta</a>
+                </li>
+                <br>
+
+                <li class="text-center" style="background-color: lightgrey" >
+                    <a href="#">Dodeli studenta projektu</a>
                 </li>
                 <br>
 
@@ -27,11 +36,8 @@
             </ul>
         </div>
 
-    </div>
 
 @stop
-
 @section('footer')
-    @parent
-    novi footer
+
 @stop
