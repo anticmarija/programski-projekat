@@ -28,3 +28,6 @@ Route::get('/singleStudent', 'StudentsController@singleStudent');
 
 Route::post('/storeSingleStudent', 'StudentsController@storeSingleStudent');
 
+Route::get('/advancedProject', 'AdvancedProjectController@create');
+
+Route::post('/storeAdvancedProject', 'AdvancedProjectController@storeAdvancedProject');

@@ -26,7 +26,7 @@
                 <br>
 
                 <li class="text-center" style="background-color: lightgrey" >
-                    <a href="#">Dodeli studenta projektu</a>
+                    <a href="/advancedProject">Dodeli studenta projektu</a>
                 </li>
                 <br>
 

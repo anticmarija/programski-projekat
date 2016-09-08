@@ -36,10 +36,8 @@ class ProjectController extends Controller
        $project->grade=0;
 
        $project->save();
-       
-       $brStud = 5;
 
-       return view('pages.students', ['project' => $project, 'brStud' => $brStud]);
+       return view('pages.students', ['project' => $project]);
 
 
    }
