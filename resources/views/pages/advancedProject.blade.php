@@ -7,7 +7,7 @@
     <form method="post" action="/storeAdvancedProject">
         <div class="form-group">
 
-            <input type="text" name="name" class="form-control" id="focusedInput" placeholder="Tema projekta">
+            <input type="text" name="title" class="form-control" id="focusedInput" placeholder="Tema projekta">
             <br>
 
             <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
@@ -15,11 +15,12 @@
             <h3>Odaberi studente na projektu:</h3>
 
 
+            <select name="student">
             @foreach($students as $student)
-                <input type="checkbox" name="student[]"
-                       value ="{{$student}}">{{$student->name}} {{$student->index}}
+                <option value="{{$student}}">{{$student->name}} {{$student->index}}</option>
                 <br>
             @endforeach
+            </select>
 
             <button type="submit" class="btn btn-primary">Potvrdi</button>
         </div>

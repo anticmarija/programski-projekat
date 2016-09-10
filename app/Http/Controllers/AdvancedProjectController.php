@@ -24,27 +24,18 @@ class AdvancedProjectController extends Controller
 
         $project = new Project;
 
-        $project->title = $request->name;
+        $project->title = $request->title;
 
         $project->save();
 
-        if (sizeof($request->student) != 0) {
+        $student = json_decode($request->student, true);
 
-            foreach ($request->student as $student) {
-                $students[] = json_decode($student, true);
-            }
+        $studentBaza = Student::find($student['id']);
 
+         $studentBaza->project_id = $project->id;
 
-            foreach ($students as $i => $student) {
+         $studentBaza->save();
 
-                $studentBaza = Student::find($student['id']);
-
-                $studentBaza->project_id = $project->id;
-
-                $studentBaza->save();
-
-            }
-        }
 
         return view('pages.end', ['project_id' => $project->id]);
 
