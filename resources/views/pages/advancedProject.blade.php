@@ -4,7 +4,7 @@
 
     <h3 style="margin-top: 50px">Unesi temu projekta:</h3>
 
-    <form method="post" action="/storeAdvancedProject">
+    <form method="post" action="{{ action('AdvancedProjectController@storeAdvancedProject') }}">
         <div class="form-group">
 
             <input type="text" name="title" class="form-control" id="focusedInput" placeholder="Tema projekta">

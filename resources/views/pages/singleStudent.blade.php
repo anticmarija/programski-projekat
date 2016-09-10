@@ -4,7 +4,7 @@
 
     <h3 style="margin-top: 50px">Unesi podatke studenta:</h3>
 
-    <form method="post" action="/storeSingleStudent">
+    <form method="post" action="{{ action('StudentsController@storeSingleStudent') }}">
         <div class="form-group">
 
             <input type="text" name="name" class="form-control" id="focusedInput" placeholder="Ime i prezime">
@@ -21,6 +21,7 @@
             <button type="submit" class="btn btn-primary">Potvrdi</button>
 
         </div>
+
 
     </form>
 @stop

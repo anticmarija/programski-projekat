@@ -36,10 +36,10 @@ class StudentsController extends Controller
 
         return view('pages.end',['project_id' => $request->input('project_id')]);
 
-    }
+}
 
     public function singleStudent() {
-        
+
         return view('pages.singleStudent');
     }
     
@@ -53,7 +53,7 @@ class StudentsController extends Controller
 
         $student->save();
 
-        return redirect()->to('/singleStudent');
+        return view('pages.uploadHandle');
 
 
     }
