@@ -37,6 +37,7 @@
     </div>
 
 
+        <p id="demo"></p>
 
         <ul id="list" class="list-group">
             @foreach($teme as $i => $tema)
@@ -67,9 +68,6 @@
 
                 var s = input.value;
 
-                lista.parentNode.removeChild(lista);
-
-
                 text = "<ol class='list-group'>";
 
                 for (i = 0; i < teme.length; i++) {
@@ -82,6 +80,8 @@
                 text += "</ol>";
 
                 document.getElementById("demo").innerHTML = text;
+
+                lista.style.visibility='hidden';
 
             }
         }
