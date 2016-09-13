@@ -12,15 +12,21 @@
 
             <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
 
-            <h3>Odaberi studente na projektu:</h3>
+            <h3>Odaberi studenta na projektu:</h3>
 
 
-            <select name="student">
-            @foreach($students as $student)
-                <option value="{{$student}}">{{$student->name}} {{$student->index}}</option>
-                <br>
-            @endforeach
-            </select>
+            @if (count($students) === 0)
+                <p>Nema prijavljenih studenata!</p>
+            @else
+
+                <select name="student">
+                    @foreach($students as $student)
+                    <option value="{{$student}}">{{$student->name}} {{$student->index}}</option>
+                    <br>
+                    @endforeach
+                </select>
+
+            @endif
 
             <button type="submit" class="btn btn-primary">Potvrdi</button>
         </div>
